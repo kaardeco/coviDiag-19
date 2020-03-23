@@ -1,6 +1,9 @@
 <img align="left" width="630" height="160" src="https://i.imgur.com/laxjXkz.png">
-<br/><br/>
+
+<br /><br />
+
 *******
+
 # CoViDiag-19
 
 Quiz informativo com intuito de ajudar a identificar os sintomas do virus SARS-CoV-2 (Covid-19), e ajudar a identificar se você precisa procurar um posto de saúde ou se bastam alguns cuidados na sua própria casa.
