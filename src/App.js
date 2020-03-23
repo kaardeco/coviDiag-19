@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Quiz from './Components/Questions/Quiz';
 import Result from './Components/Questions/Result';
 import quizQuestions from './Api/quizQuestions';
-import logo from './Assets/imgs/logo.svg';
+import logo from './Assets/imgs/logo.png';
 import './App.css';
 
 class App extends Component {
@@ -122,12 +123,30 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>React Quiz</h2>
+
+        <div className="Container">
+          <div className="App-header row">
+            <div className="col-6 center">
+              <a href="index.js"><h2>coviDiag-19</h2></a>
+            </div>
+
+            <div className="col-6 center">
+              <img src={logo} className="App-logo" alt="logo" />
+            </div>
+          </div>
+
         </div>
         {this.state.result ? this.renderResult() : this.renderQuiz()}
-      </div>
+
+        <div className="container">
+          <div className="row fixed-bottom">
+            <div className="copyright col-12 ">
+              &copy; Feito com ♥ pelos alunos da UERN, UFRN e IFMG.
+              </div>
+          </div>
+        </div>
+
+      </div >
     );
   }
 }
