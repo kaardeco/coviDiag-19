@@ -126,22 +126,43 @@ class App extends Component {
 
         <div className="Container">
           <div className="App-header row">
-            <div className="col-6 center">
-              <a href="index.js"><h2>coviDiag-19</h2></a>
+            <div className="col-12">
+              <a href="./index.js"><img src={logo} className="App-logo" alt="logo" /></a>
             </div>
+          </div>
+        </div>
 
-            <div className="col-6 center">
-              <img src={logo} className="App-logo" alt="logo" />
+        {this.state.result ? this.renderResult() : this.renderQuiz()}
+
+
+        <div className="container buttons fixed-bottom">
+          <div className="row">
+            <div class="col-12 infos">
+              <h5>Mais Informações</h5>
             </div>
           </div>
 
+          <div className="row">
+
+            <div className="col-4">
+              <a href="#" class="btn btn-danger">Urgência</a>
+            </div>
+
+            <div className="col-4">
+              <a href="tel:84999941088" class="btn btn-success">Plantão</a>
+            </div>
+
+            <div className="col-4">
+              <a href="https://covid19-brazil-api.now.sh/" target="_blank" class="btn btn-primary">Dados</a>
+            </div>
+
+          </div>
         </div>
-        {this.state.result ? this.renderResult() : this.renderQuiz()}
 
         <div className="container">
           <div className="row fixed-bottom">
             <div className="copyright col-12 ">
-              &copy; Feito com ♥ pelos alunos da UERN, UFRN e IFMG.
+              &copy; Idealizado pelo GES-UERN
               </div>
           </div>
         </div>

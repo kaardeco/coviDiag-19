@@ -3,14 +3,8 @@
 }
 
 .App-logo {
-  height: 8vmin;
+  height: 9vmin;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -27,18 +21,18 @@
   text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.buttons {
+  max-width: 60vh;
+  padding-bottom: 10vh;
+}
+
+.infos {
+  padding: 20px;
 }
 
 .copyright {
   text-align: center;
   background-color: #282c34;
-  color: rgb(151, 151, 151);
-  padding: 5px;
+  color: #fff;
+  padding: 0.2rem;
 }
