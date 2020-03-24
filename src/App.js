@@ -99,7 +99,7 @@ class App extends Component {
     if (result.length === 1) {
       this.setState({ result: result[0] });
     } else {
-      this.setState({ result: 'Undetermined' });
+      this.setState({ result: 'ficar alerta em casa' });
     }
   }
 
@@ -127,7 +127,7 @@ class App extends Component {
         <div className="Container">
           <div className="App-header row">
             <div className="col-12">
-              <a href="./index.js"><img src={logo} className="App-logo" alt="logo" /></a>
+              <a href="index.js"><img src={logo} className="App-logo" alt="logo" /></a>
             </div>
           </div>
         </div>
