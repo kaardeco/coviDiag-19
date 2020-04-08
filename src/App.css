@@ -6,7 +6,11 @@
   height: 9vmin;
   pointer-events: none;
 }
-
+.row{
+  /*remove the unnecessary side scroll from the page*/
+  margin-left: auto;
+  margin-right:auto ;
+}
 .App-header {
   background-color: #282c34;
   min-height: 10vh;

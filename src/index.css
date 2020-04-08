@@ -32,15 +32,22 @@ body {
   border-radius: 3px;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .container {
     margin: 2.5rem auto;
+  }
+
+  .answerOption{
+    width: 50% !important;
   }
 
   .buttons {
       margin: 2.0rem auto;
     }
+  
 }
+
+
 
 /* Result Component */
 .result {
@@ -70,6 +77,9 @@ body {
 /* AnswerOption Component */
 .answerOption {
   border-top: 1px solid #eee;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .answerOption:hover {
