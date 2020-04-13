@@ -162,7 +162,7 @@ var quizQuestions = [
                 content: "Sim"
             },
            {
-                type: "ficarem casa",
+                type: "ficar em casa",
                 content: "Não"
             }
         ]

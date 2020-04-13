@@ -54,9 +54,14 @@ class App extends Component {
   }
 
   handleAnswerSelected(event) {
-    this.setUserAnswer(event.currentTarget.value);
 
-    if (this.state.questionId < quizQuestions.length) {
+    let currentContent = event.currentTarget.labels[0].firstChild.data;//content of input radio
+    this.setUserAnswer(event.currentTarget.value);
+    if(this.state.questionId === 7 && currentContent==='Não'){
+      //Skipping question eight depending on question seven
+      console.log('jump');
+      setTimeout(() => this.setNextQuestion(2), 300);
+    }else if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
       setTimeout(() => this.setResults(this.getResults()), 300);
@@ -64,6 +69,7 @@ class App extends Component {
   }
 
   setUserAnswer(answer) {
+    //takes a response from the user
     this.setState((state, props) => ({
       answersCount: {
         ...state.answersCount,
@@ -73,9 +79,9 @@ class App extends Component {
     }));
   }
 
-  setNextQuestion() {
-    const counter = this.state.counter + 1;
-    const questionId = this.state.questionId + 1;
+  setNextQuestion(step=1) {
+    const counter = this.state.counter + step;
+    const questionId = this.state.questionId + step;
 
     this.setState({
       counter: counter,
