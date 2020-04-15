@@ -56,6 +56,7 @@ class App extends Component {
   handleAnswerSelected(event) {
 
     let currentContent = event.currentTarget.labels[0].firstChild.data;//content of input radio
+    console.log(currentContent);
     this.setUserAnswer(event.currentTarget.value);
     if(this.state.questionId === 7 && currentContent==='Não'){
       //Skipping question eight depending on question seven
