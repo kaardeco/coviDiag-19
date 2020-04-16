@@ -109,8 +109,7 @@ class App extends Component {
         setTimeout(300);
         break;
     }
-    console.log(currentState);
-
+    
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
@@ -127,8 +126,6 @@ class App extends Component {
         countRecomendation+=1;
       }
     }
-
-    console.log(countRecomendation);
       //Individuo sintomas leves
       if (countRecomendation === (1 || 2) && currentState.advancedAge === true)
         return "Olá, você apresenta informações sugestivas de COVID-19, mas devido a não haver sintomas, ou da forma mais leve possível, a recomendação da OMS e Ministério da Saúde é ficar em casa e permanecer em isolamento.";
