@@ -19,7 +19,15 @@ function Credits() {
             </h6>
             <h6>
                 <br/>Colaboradores:
-                <br/> xxxxxxxxxxxxx
+                <br/> <a href="https://github.com/kaardeco">Allan Kardec</a>
+                <br/><a href="https://github.com/exlleysantos">Exlley Santos</a>
+                <br/><a href="#">Fernando Ferreira</a>
+                <br/><a href="#">Francisco Italo</a>
+                <br/><a href="#">Guilherme Silveira</a>
+                <br/><a href="#">Gustavo Patrick</a>
+                <br/><a href="#">Jorge Braz</a>
+                <br/><a href="#">Leilane Alice</a>
+                <br/><a href="#">Lucas Duarte</a>
                 <br/> <br/> Mais informações: 
                 <br/> <a href="ciciliamaia@uern.br">Cicilia Maia</a>
                 <br/> <a href="ameliacarolina@uern.br ">Amélia Fernandes</a>

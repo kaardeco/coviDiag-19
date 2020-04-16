@@ -28,15 +28,15 @@ function Result(props) {
                 <div className="row">
 
                     <div className="col-4">
-                    <a href="#" className="btn btn-default">Urgência</a>
+                    <a href="#" className="btn btn-link">Urgência</a>
                     </div>
 
                     <div className="col-4">
-                    <a href="tel:84999941088" className="btn btn-info">Sobre</a>
+                    <a href="tel:84999941088" className="btn btn-link">Sobre</a>
                     </div>
 
                     <div className="col-4">
-                    <a href="https://covid19-brazil-api.now.sh/" target="_blank" className="btn btn-primary">Dados</a>
+                    <a href="https://covid19-brazil-api.now.sh/" target="_blank" className="btn btn-link">Dados</a>
                     </div>
 
                 </div>

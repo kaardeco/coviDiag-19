@@ -231,7 +231,7 @@ class App extends Component {
           </div>
         </div>
 
-        {this.state.result ? this.renderResult() : this.renderQuiz()}
+        {this.state.result ? this.renderResult() : this.renderCredits()}
 
         <div className="container">
           <div className="row fixed-bottom">
