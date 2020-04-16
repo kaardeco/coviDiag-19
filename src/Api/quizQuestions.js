@@ -54,7 +54,7 @@ var quizQuestions = [
             },
             {
                 type: "p1",
-                content: "12 a 60 anos"
+                content: "13 a 60 anos"
             },
            {
                 type: "idade",
@@ -110,7 +110,7 @@ var quizQuestions = [
     },
 
     {
-        question: "Está tendo dificuldade para respirar com dor ou pressão no peito?",
+        question: "Está sentindo falta de ar, com dor ou pressão no peito?",
         answers: [
             {
                 type: "hasDyspnea",

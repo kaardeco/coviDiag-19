@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Question from './Question';
 import QuestionCount from './QuestionCount';
 import AnswerOption from './AnswerOption';
+import logo_uern from "../../Assets/imgs/covid.jpeg"
 
 function Quiz(props) {
     function renderAnswerOptions(key) {
@@ -25,6 +26,9 @@ function Quiz(props) {
             <ul className="answerOptions">
                 {props.answerOptions.map(renderAnswerOptions)}
             </ul>
+            <div className="container buttons fixed-bottom">
+                <img src= {logo_uern} alt="" height = "100pt"/>
+            </div>
         </div>
     );
 }
