@@ -21,7 +21,7 @@ function Result(props) {
             <div className="container buttons fixed-bottom">
                 <div className="row">
                     <div className="col-12 infos">
-                    <h5>Mais Informações</h5>
+                    <h5>Mais Informações:</h5>
                     </div>
                 </div>
 
