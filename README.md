@@ -12,20 +12,23 @@
 ---
 
 ```
-Quiz informativo com intuito de ajudar a identificar os sintomas do virus SARS-CoV-2 (Covid-19), 
-e ajudar a identificar se você precisa procurar um posto de saúde ou se bastam alguns cuidados na
-sua própria casa.
+Solução desenvolvida pelo Grupo de Engenharia de Software do Departamento de Informática em parceria com Departamento de Enfermagem da Universidade do Estado do Rio Grande do Norte (UERN), sob a coordenação da Profa. Dra. Cicília Maia e Profa. Ma. Amélia Fernandes.
 ```
 
 ### Contribuindo
 Sua contribuição e/ou sugestão é muito essencial para esse momento, então, leia com atenção o arquivo [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ### Colaboradores
+* **Ma. Amélia Fernandes** - *Pesquisa* - [ameliacarolina@uern.br](cameliacarolina@uern.br)
+* **Dra. Cicília Maia** - *Pesquisa* - [ciciliamaia@uern.br](ciciliamaia@uern.br)
 
 * **Allan Kardec** - *Código* - [kaardeco](https://github.com/kaardeco)
+* **Exlley Santos** - *Código/Pesquisa* - [exlleysantos](https://github.com/exlleysantos)
+* **Fernando Ferreira** - *Código/Pesquisa* - [fferreiralf](https://github.com/fferreiralf)
+* **Francisco Italo** - *Código* - [italosilva01](https://github.com/italosilva01)
 * **Guilherme Silveira** - *Código* - [b00tk1ll](https://github.com/b00tk1ll)
 * **Gustavo Patrick** - *Código* - [FarkoMoot](https://github.com/FarkoMoot)
-* **Fernando Ferreira** - *Código/Pesquisa* - [fferreiralf]https://github.com/fferreiralf)
+
 * **Leilane Alice** - *Pesquisa* - [leilanealice](#)
 * **Lucas Duarte** - *Pesquisa* - [LucasMitsuaki](https://github.com/LucasMitsuaki)
 * **Jorge Braz** - *Pesquisa* - [jlsbraz](https://github.com/jlsbraz)

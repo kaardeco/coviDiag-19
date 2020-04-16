@@ -1,6 +1,11 @@
 import React from 'react';
-import logo from "../../Assets/imgs/logo-uern.png"
-import "../../index.css"
+import logo from "../../Assets/imgs/logo-uern.png";
+import Button from '@material-ui/core/Button';
+import "../../index.css";
+
+function refreshPage() {
+    window.location.reload(false);
+}
 
 function Credits() {
     return (
@@ -20,30 +25,10 @@ function Credits() {
                 <br/> <a href="ameliacarolina@uern.br ">Amélia Fernandes</a>
             </h6>
             <h5><br/><a href="http://portal.uern.br/coronavirus/">#uerncontracoronavirus</a></h5>
-
-        </div>
-
-        <div className="container buttons fixed-bottom">
-            <div className="row">
-                <div class="col-12 infos">
-                    <h5>Mais Informações</h5>
-                </div>
-            </div>
-
-            <div className="row">
-
-                <div className="col-4">
-                    <a href="#" class="btn btn-danger">Urgência</a>
-                </div>
-
-                <div className="col-4">
-                    <a href="tel:84999941088" class="btn btn-success">Plantão</a>
-                </div>
-
-                <div className="col-4">
-                    <a href="https://covid19-brazil-api.now.sh/" target="_blank" class="btn btn-primary">Dados 🚨</a>
-                </div>
-            </div>
+            
+            <Button onClick= {refreshPage} font-size = "15pt" color="primary" autoFocus>
+                Retornar 
+            </Button>
         </div>
     </div>
     );

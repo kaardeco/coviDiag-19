@@ -8,6 +8,7 @@ import './App.css';
 import Credits from './Components/Questions/Credits';
 import HomeScreen from './Components/Questions/HomeScreen';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -87,6 +88,7 @@ class App extends Component {
         break;
       case "Você está sentindo febre?":
         if(currentContent === "Não") setTimeout(() => this.setNextQuestion(2), 300);
+        else if(currentContent === "Sim, há mais de dois dias") currentState.persistentFever = true;
         break;
       case "Tomou algum medicamento para febre?":
         if(currentContent === "Não") setTimeout(() => this.setNextQuestion(1), 300);
@@ -94,14 +96,14 @@ class App extends Component {
       case "Mesmo com uso de medicamentos os sintomas persistem após 2h?":
         if(currentContent === "Sim") currentState.persistentFever = true;
         break;
-      case "Está tendo dificuldade para respirar com dor ou pressão no peito?":
+      case "Está sentindo falta de ar, com dor ou pressão no peito?":
         if(currentContent === "Sim") currentState.dyspnea = true;
         break;
       case "Está com coriza?":
-        if(currentContent === "Sim") currentState.coryza = true;
+        if(currentContent === "Sim" || "Sim, há mais de dois dias") currentState.coryza = true;
         break;
       case "Você está tossindo? (Tosse seca ou cheia)":
-        if(currentContent === "Sim") currentState.persistentCough = true;
+        if(currentContent === "Sim" || "Sim, há mais de dois dias") currentState.persistentCough = true;
         break;
       default:
         setTimeout(300);
@@ -139,12 +141,18 @@ class App extends Component {
       else if (countRecomendation === (2 || 3) && (currentState.persistentFever, currentState.dyspnea === true))
         return "Veja bem, você apresenta sintomas que requerem atenção, como falta de ar e febre persistente. Você deve se dirigir a um serviço de saúde, no caso, à Unidade de Pronto-Atendimento (UPA).";
       //   indivíduo com sintomas moderados
-      else if (countRecomendation === 3 && (currentState.persistentFever, currentState.persistentCough, currentState.coryza === true))
-        return "Olá, segundo suas queixas, você pode estar apresentando sintomas de COVID-19, mas eles se caracterizam como moderados (coriza+febre+tosse). Observando os sintomas, recomendamos que você se encaminhe a uma Unidade Básica de Saúde ou Posto de Saúde. Tome muito líquido, fique de repouso e adote medidas de isolamento";
-      else if (countRecomendation === (4 || 5 || 6) && currentState.isPregnant3 === true)
+      else if (countRecomendation === 3 && (currentState.persistentFever === true && currentState.persistentCough=== true && currentState.coryza === true))
+        return "Olá, segundo suas queixas, você pode estar apresentando sintomas de COVID-19, mas eles se caracterizam como moderados (coriza + febre + tosse). Observando os sintomas, recomendamos que você se encaminhe a uma Unidade Básica de Saúde ou Posto de Saúde. Tome muito líquido, fique de repouso e adote medidas de isolamento";
+      else if (countRecomendation === 3 && (currentState.persistentFever === true && currentState.isPregnant3 === true && currentState.dyspnea === true))
         return "Então, devido a você estar no terceiro trimestre de gestação, seus sintomas podem ser sugestivos de COVID-19. Recomendamos você entrar em contato com seu(sua) obstetra ou profissional que tem acompanhado o seu pré-natal e se encaminhe para uma Unidade de Pronto-Atendimento (UPA).";
-      else if (countRecomendation === (4 || 5 || 6) && currentState.advancedAge === true)
-        return "Veja bem, você apresenta sintomas que requerem atenção, como falta de ar e/ou febre persistente. Você deve se dirigir a um serviço de saúde, no caso, à Unidade de Pronto-Atendimento (UPA)."
+      else if (countRecomendation === 4 || countRecomendation === 5 || countRecomendation === 6){ 
+        if (currentState.isPregnant3 === true) 
+          return "Então, devido a você estar no terceiro trimestre de gestação, seus sintomas podem ser sugestivos de COVID-19. Recomendamos você entrar em contato com seu(sua) obstetra ou profissional que tem acompanhado o seu pré-natal e se encaminhe para uma Unidade de Pronto-Atendimento (UPA).";
+        else if (currentState.advancedAge === true)
+          return "Veja bem, você apresenta sintomas que requerem atenção, como falta de ar e/ou febre persistente. Você deve se dirigir a um serviço de saúde, no caso, à Unidade de Pronto-Atendimento (UPA)."
+        else
+          return "Veja bem, você apresenta sintomas que requerem atenção, como falta de ar e/ou febre persistente. Você deve se dirigir a um serviço de saúde, no caso, à Unidade de Pronto-Atendimento (UPA)."
+      }
       else 
         return "Oi, devido a não haver sintomas, ou da forma mais leve possível, a recomendação da OMS e Ministério da Saúde é ficar em casa e permanecer em isolamento."  
   }
@@ -227,31 +235,6 @@ class App extends Component {
         </div>
 
         {this.state.result ? this.renderResult() : this.renderQuiz()}
-
-
-        <div className="container buttons fixed-bottom">
-          <div className="row">
-            <div className="col-12 infos">
-              <h5>Mais Informações</h5>
-            </div>
-          </div>
-
-          <div className="row">
-
-            <div className="col-4">
-              <a href="#" className="btn btn-danger">Urgência</a>
-            </div>
-
-            <div className="col-4">
-              <a href="tel:84999941088" className="btn btn-success">Plantão</a>
-            </div>
-
-            <div className="col-4">
-              <a href="https://covid19-brazil-api.now.sh/" target="_blank" className="btn btn-primary">Dados</a>
-            </div>
-
-          </div>
-        </div>
 
         <div className="container">
           <div className="row fixed-bottom">
