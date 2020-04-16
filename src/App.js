@@ -58,6 +58,7 @@ class App extends Component {
   handleAnswerSelected(event) {
 
     let currentContent = event.currentTarget.labels[0].firstChild.data;//content of input radio
+    //verifi here
     console.log(currentContent);
     this.setUserAnswer(event.currentTarget.value);
     if(this.state.questionId === 7 && currentContent==='Não'){
