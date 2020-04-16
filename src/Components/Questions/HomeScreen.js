@@ -28,7 +28,8 @@ export default function HomeScreen(){
             <DialogTitle id="alert-dialog-title">{"Bem vind@ ao CoviDiag-19"}</DialogTitle>
             <DialogContent>
             <DialogContentText id="alert-dialog-description">
-                Nosso objetivo é te orientar  na identificação de sinais e sintomas sugestivos à Covid-19. Para isso, faremos algumas perguntas, tudo bem?
+                <p align = "justify">Nosso objetivo é te orientar  na identificação de sinais e sintomas sugestivos à Covid-19. Para isso, faremos algumas perguntas, tudo bem?</p>
+                <p align = "justify"> --- <br/> O COVIDIAG-19 faz apenas análise inicial dos sinais e sintomas sugestivos à COVIDIAG-19 sendo caracterizado como sistema de apoio à decisão médica. Desta forma, não substitui o diagnóstico médico.</p>
             </DialogContentText>
             </DialogContent>
             <DialogActions>
