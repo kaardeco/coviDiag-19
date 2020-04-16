@@ -6,6 +6,7 @@ import quizQuestions from './Api/quizQuestions';
 import logo from './Assets/imgs/logo.png';
 import './App.css';
 import Credits from './Components/Questions/Credits';
+import HomeScreen from './Components/Questions/HomeScreen';
 
 class App extends Component {
   constructor(props) {
@@ -111,7 +112,12 @@ class App extends Component {
     }
   }
 
+  renderHomeScreen(){
+    return <HomeScreen />
+  }
+
   renderQuiz() {
+    this.renderHomeScreen();
     return (
       <Quiz
         answer={this.state.answer}
@@ -144,7 +150,7 @@ class App extends Component {
           </div>
         </div>
 
-        {this.state.result ? this.renderResult() : this.renderQuiz()}
+        {this.state.result ? this.renderResult() : this.renderHomeScreen()}
 
 
         <div className="container buttons fixed-bottom">
