@@ -1,6 +1,4 @@
 import React from 'react';
-import Popup from "reactjs-popup";
-import logo from '../../Assets/imgs/logo-uern.png'
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';

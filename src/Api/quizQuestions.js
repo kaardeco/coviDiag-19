@@ -26,21 +26,21 @@ var quizQuestions = [
             }
         ]
     },
-/*
+
     {
         question: "Em qual trimestre de gestação?",//Caso seja gestasnte
         answers: [
             {
                 type: "p1",
-                content: "1ºTrimestre"
+                content: "1º Trimestre"
             },
             {
                 type: "p2",
-                content: "2ºTrimestre"
+                content: "2º Trimestre"
             },
            {
                 type: "trimestre",
-                content: "3ºTrimestre"
+                content: "3º Trimestre"
             }
         ]
     },
@@ -50,15 +50,15 @@ var quizQuestions = [
         answers: [
             {
                 type: "p1",
-                content: "0-12"
+                content: "0 a 12 anos"
             },
             {
                 type: "p1",
-                content: "12-60"
+                content: "12 a 60 anos"
             },
            {
                 type: "idade",
-                content: "60+"
+                content: "Mais de 60 anos"
             }
         ]
     },
@@ -158,7 +158,7 @@ var quizQuestions = [
             }
         ]
     },
-
+/*
     {
         question: "Está tendo convulsões?",
         answers: [
@@ -170,34 +170,6 @@ var quizQuestions = [
                 type: "p1",
                 content: "Não"
             },
-        ]
-    },
-    
-    {
-        question: "Está notando as suas extremidades azuladas?",
-        answers: [
-            {
-                type: "p3",
-                content: "Sim"
-            },
-           {
-                type: "p1",
-                content: "Não"
-            }
-        ]
-    },
-/*
-    {
-        question: "Está notando o rosto ou os lábios azulados?",
-        answers: [
-            {
-                type: "procurar um hospital",
-                content: "Sim"
-            },
-           {
-                type: "ficarem casa",
-                content: "Não"
-            }
         ]
     },
 

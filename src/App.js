@@ -19,7 +19,15 @@ class App extends Component {
       answerOptions: [],
       answer: '',
       answersCount: {},
-      result: ''
+      result: '',
+      mainsSymptoms: {
+        persistentFever: false,
+        dyspnea: false,
+        advancedAge: false,
+        persistentCough: false,
+        isPregnant: false,
+        coryza : false,
+      },
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -58,19 +66,54 @@ class App extends Component {
   handleAnswerSelected(event) {
 
     let currentContent = event.currentTarget.labels[0].firstChild.data;//content of input radio
-    //verifi here
-    console.log(currentContent);
+    var currentQuestion = quizQuestions[this.state.counter].question;
+    var currentState = this.state.mainsSymptoms;
     this.setUserAnswer(event.currentTarget.value);
-    if(this.state.questionId === 7 && currentContent==='Não'){
-      //Skipping question eight depending on question seven
-      console.log('jump');
-      setTimeout(() => this.setNextQuestion(2), 300);
-    }else if (this.state.questionId < quizQuestions.length) {
+
+    switch (currentQuestion) {
+      case "Qual o seu sexo?":
+        if(currentContent === "Masculino") setTimeout(() => this.setNextQuestion(2), 300);
+        break;
+      case "É gestante?":
+        if(currentContent === "Não") setTimeout(() => this.setNextQuestion(1), 300);
+        break;
+      case "Em qual trimestre de gestação?":
+        if(currentContent === "3º Trimestre") currentState.isPregnant = true;
+        break;
+      case "Qual sua idade?":
+        if(currentContent === "Mais de 60 anos") currentState.advancedAge = true;
+        break;
+      case "Você está sentindo febre?":
+        if(currentContent === "Não") setTimeout(() => this.setNextQuestion(2), 300);
+        break;
+      case "Tomou algum medicamento para febre?":
+        if(currentContent === "Não") setTimeout(() => this.setNextQuestion(1), 300);
+        break;
+      case "Mesmo com uso de medicamentos os sintomas persistem após 2h?":
+        if(currentContent === "Sim") currentState.persistentFever = true;
+        break;
+      case "Está tendo dificuldade para respirar com dor ou pressão no peito?":
+        if(currentContent === "Sim") currentState.dyspnea = true;
+        break;
+      case "Está com coriza?":
+        if(currentContent === "Sim") currentState.coryza = true;
+        break;
+      case "Você está tossindo? (Tosse seca ou cheia)":
+        if(currentContent === "Sim") currentState.persistentCough = true;
+        break;
+      default:
+        setTimeout(300);
+        break;
+    }
+    console.log(currentState);
+
+    if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
       setTimeout(() => this.setResults(this.getResults()), 300);
     }
   }
+
 
   setUserAnswer(answer) {
     //takes a response from the user
@@ -151,12 +194,12 @@ class App extends Component {
           </div>
         </div>
 
-        {this.state.result ? this.renderResult() : this.renderHomeScreen()}
+        {this.state.result ? this.renderResult() : this.renderQuiz()}
 
 
         <div className="container buttons fixed-bottom">
           <div className="row">
-            <div class="col-12 infos">
+            <div className="col-12 infos">
               <h5>Mais Informações</h5>
             </div>
           </div>
@@ -164,15 +207,15 @@ class App extends Component {
           <div className="row">
 
             <div className="col-4">
-              <a href="#" class="btn btn-danger">Urgência</a>
+              <a href="#" className="btn btn-danger">Urgência</a>
             </div>
 
             <div className="col-4">
-              <a href="tel:84999941088" class="btn btn-success">Plantão</a>
+              <a href="tel:84999941088" className="btn btn-success">Plantão</a>
             </div>
 
             <div className="col-4">
-              <a href="https://covid19-brazil-api.now.sh/" target="_blank" class="btn btn-primary">Dados</a>
+              <a href="https://covid19-brazil-api.now.sh/" target="_blank" className="btn btn-primary">Dados</a>
             </div>
 
           </div>
