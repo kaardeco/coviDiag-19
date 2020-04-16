@@ -5,6 +5,7 @@ import Result from './Components/Questions/Result';
 import quizQuestions from './Api/quizQuestions';
 import logo from './Assets/imgs/logo.png';
 import './App.css';
+import Credits from './Components/Questions/Credits';
 
 class App extends Component {
   constructor(props) {
@@ -125,6 +126,10 @@ class App extends Component {
 
   renderResult() {
     return <Result quizResult={this.state.result} />;
+  }
+
+  renderCredits(){
+    return <Credits/>
   }
 
   render() {

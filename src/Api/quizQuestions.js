@@ -26,7 +26,7 @@ var quizQuestions = [
             }
         ]
     },
-
+/*
     {
         question: "Em qual trimestre de gestação?",//Caso seja gestasnte
         answers: [
