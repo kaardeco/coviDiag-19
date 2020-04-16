@@ -28,7 +28,7 @@ export default function HomeScreen(){
             <DialogTitle id="alert-dialog-title">{"Bem vind@ ao CoviDiag-19"}</DialogTitle>
             <DialogContent>
             <DialogContentText id="alert-dialog-description">
-                Nosso objetivo é te orientar  na identificação de sinais e sintomas sugestivo à Covid-19. Faremos algumas perguntas, tudo bem?
+                Nosso objetivo é te orientar  na identificação de sinais e sintomas sugestivos à Covid-19. Para isso, faremos algumas perguntas, tudo bem?
             </DialogContentText>
             </DialogContent>
             <DialogActions>
