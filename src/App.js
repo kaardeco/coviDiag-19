@@ -109,7 +109,7 @@ class App extends Component {
         setTimeout(300);
         break;
     }
-    
+
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
@@ -139,12 +139,12 @@ class App extends Component {
         return "Veja bem, você apresenta sintomas que requerem atenção, como falta de ar e febre persistente. Você deve se dirigir a um serviço de saúde, no caso, à Unidade de Pronto-Atendimento (UPA).";
       //   indivíduo com sintomas moderados
       else if (countRecomendation === 3 && (currentState.persistentFever === true && currentState.persistentCough=== true && currentState.coryza === true))
-        return "Olá, segundo suas queixas, você pode estar apresentando sintomas de COVID-19, mas eles se caracterizam como moderados (coriza + febre + tosse). Observando os sintomas, recomendamos que você se encaminhe a uma Unidade Básica de Saúde ou Posto de Saúde. Tome muito líquido, fique de repouso e adote medidas de isolamento";
+        return "Olá, segundo suas queixas, você pode estar apresentando sintomas de COVID-19, mas eles se caracterizam como moderados (coriza + febre + tosse). Observando os sintomas, recomendamos que dirija-se a uma Unidade Básica de Saúde ou Posto de Saúde. Tome muito líquido, fique de repouso e adote medidas de isolamento.";
       else if (countRecomendation === 3 && (currentState.persistentFever === true && currentState.isPregnant3 === true && currentState.dyspnea === true))
-        return "Então, devido a você estar no terceiro trimestre de gestação, seus sintomas podem ser sugestivos de COVID-19. Recomendamos você entrar em contato com seu(sua) obstetra ou profissional que tem acompanhado o seu pré-natal e se encaminhe para uma Unidade de Pronto-Atendimento (UPA).";
+        return "Então, devido a você estar no terceiro trimestre de gestação, seus sintomas podem ser sugestivos de COVID-19. Recomendamos você entrar em contato com seu(sua) obstetra ou profissional que tem acompanhado o seu pré-natal e dirija-se a uma Unidade de Pronto-Atendimento (UPA).";
       else if (countRecomendation === 4 || countRecomendation === 5 || countRecomendation === 6){ 
         if (currentState.isPregnant3 === true) 
-          return "Então, devido a você estar no terceiro trimestre de gestação, seus sintomas podem ser sugestivos de COVID-19. Recomendamos você entrar em contato com seu(sua) obstetra ou profissional que tem acompanhado o seu pré-natal e se encaminhe para uma Unidade de Pronto-Atendimento (UPA).";
+          return "Então, devido a você estar no terceiro trimestre de gestação, seus sintomas podem ser sugestivos de COVID-19. Recomendamos você entrar em contato com seu(sua) obstetra ou profissional que tem acompanhado o seu pré-natal e dirija-se a uma Unidade de Pronto-Atendimento (UPA).";
         else if (currentState.advancedAge === true)
           return "Veja bem, você apresenta sintomas que requerem atenção, como falta de ar e/ou febre persistente. Você deve se dirigir a um serviço de saúde, no caso, à Unidade de Pronto-Atendimento (UPA)."
         else
