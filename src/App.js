@@ -114,7 +114,6 @@ class App extends Component {
     }
   }
 
-
   setUserAnswer(answer) {
     //takes a response from the user
     this.setState((state, props) => ({
@@ -184,8 +183,9 @@ class App extends Component {
 
   render() {
     return (
+      
       <div className="App">
-
+        <HomeScreen/>
         <div className="Container">
           <div className="App-header row">
             <div className="col-12">
